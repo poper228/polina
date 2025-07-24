@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скрытый смысл в бутонах</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f5f0;
+            color: #5a4a42; 
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: #d4a373; 
+            color: #fff8f0; 
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .menu {
+            background: #b38b6d; 
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .menu a {
+            color: #fff8f0;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+        
+        .menu a:hover {
+            background: #8b5a2b; 
+        }
+        
+        .content {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .section {
+            display: none;
+            padding: 10px;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .flower {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0d5c8;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .flower img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 10px 0;
+            border: 1px solid #e0d5c8;
+            border-radius: 3px;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #8b5a2b;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .rating {
+            color: #d4a373;
+            font-size: 1.5em;
+            letter-spacing: 3px;
+        }
+        
+        .footer {
+            background: #b38b6d; 
+            color: #fff8f0;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        /* Стили формы */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #5a4a42;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d4a373;
+            border-radius: 3px;
+            box-sizing: border-box;
+            background: #fffcf8;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        button {
+            background: #d4a373;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #b38b6d;
+        }
+        
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            display: none;
+            border-radius: 3px;
+            border-left: 4px solid;
+        }
+        
+        .success {
+            background: #f0e9e0;
+            color: #8b5a2b;
+            border-left-color: #d4a373;
+        }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            .menu a {
+                display: block;
+                margin: 5px 0;
+            }
+            
+            .content {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+	<!-- PWA Required Meta Tags -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4a373">
+<link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="header">
+        <h1>Скрытый смысл в бутонах</h1>
+        <p>Язык цветов в разных культурах</p>
+    </div>
+    
+    <div class="menu">
+        <a href="#" onclick="showSection('main')">Главная</a>
+        <a href="#" onclick="showSection('symbols')">Символика</a>
+        <a href="#" onclick="showSection('gallery')">Примеры букетов</a>
+        <a href="#" onclick="showSection('feedback')">Обратная связь</a>
+    </div>
+    
+    <div class="content">
+        <!-- Главная -->
+        <div id="main" class="section active">
+            <h2>О языке цветов</h2>
+            <p>Флориография — это символический язык, посредством которого люди выражали свои чувства через цветы и растения. В викторианскую эпоху этот язык достиг особой популярности.</p>
+            
+            <div class="flower">
+                <h3>Интересный факт</h3>
+                <p>В 19 веке существовали целые цветочные словари, где описывались значения каждого растения, его цвета и количества в букете.</p>
+            </div>
+        </div>
+        
+        <!-- Символика -->
+        <div id="symbols" class="section">
+            <h2>Символика цветов</h2>
+            
+            <div class="flower">
+                <h3>Роза</h3>
+                <img src="https://romashkino.ru/upload/dev2fun.imagecompress/webp/iblock/d0e/9316131688441ea6b5931b50ba205e5c.webp" alt="Роза">
+                <p><b>Значение:</b> любовь, страсть</p>
+                <p>Красные розы символизируют сильную любовь, белые - чистоту, желтые - дружбу.</p>
+				<div class="price">Средняя цена 1 шт: 200 руб.</div>
+                
+            </div>
+            
+            <div class="flower">
+                <h3>Хризантема</h3>
+                <img src="https://i.artfile.ru/2048x1365_791324_[www.ArtFile.ru].jpg" alt="Хризантема">
+                <p><b>Значение:</b> чистота, истина</p>
+                <p>В Японии хризантему называют «кику», что означает «солнце»</p>
+				<div class="price">Средняя цена 1 шт: 150 руб.</div>
+            </div>
+            
+            <div class="flower">
+                <h3>Пион</h3>
+                <img src="https://avatars.mds.yandex.net/i?id=8874bdd512d3c1aff41f636364515d02_l-12693483-images-thumbs&n=13" alt="Пион">
+                <p><b>Значение:</b> богатство, честь</p>
+                <p>В Китае считается королём цветов, символом благополучия и процветания.</p>
+				<div class="price"> Средняя цена 1 шт: 350 руб.</div>
+                
+            </div>
+            
+            <div class="flower">
+                <h3>Тюльпан</h3>
+                <img src="https://pic.rutubelist.ru/video/80/e1/80e155c50dc5130843ecf43bd3d7c4da.jpg" alt="Тюльпан">
+                <p><b>Значение:</b> объяснение в любви</p>
+                <p>Красные тюльпаны означают страстную любовь, желтые - безответное чувство.</p>
+				<div class="price"> Средняя цена 1 шт: 100 руб.</div>
+            </div>
+        </div>
+        
+        <!-- Галерея -->
+        <div id="gallery" class="section">
+            <h2>Примеры красивых букетов с данными цветами</h2>
+            
+            <div class="flower">
+                <h3>Букет с пионами</h3>
+                <img src="https://content2.flowwow-images.com/data/flowers/524x524/35/1734791796_70983535.jpg">
+                <div class="price">Цена: 9450 руб.</div>
+                <div class="rating">★★★★★</div>
+            </div>
+            
+            <div class="flower">
+                <h3>Букет с тюльпанами</h3>
+                <img src="https://mosballoon.ru/image/cache/catalog/photo_flower/photo1709045571-800x800.jpeg">
+				<div class="price">Цена: 7500  руб.</div>
+                <div class="rating">★★★★★</div>
+            </div>
+            
+            <div class="flower">
+                <h3>Букет с розами</h3>
+                <img src="https://avatars.mds.yandex.net/get-mpic/5240772/img_id1273109571368796866.jpeg/orig">
+				<div class="price">Цена: 13500 руб.</div>
+                <div class="rating">★★★★★</div>
+            </div>
+            
+            <div class="flower">
+                <h3>Букет с хризантемами</h3>
+                <img src="https://avatars.mds.yandex.net/get-mpic/5256749/img_id1997000849270264436.jpeg/orig">
+				<div class="price">Цена: 6350 руб.</div>
+                <div class="rating">★★★★★</div>
+            </div>
+        </div>
+        
+        <!-- Обратная связь -->
+        <div id="feedback" class="section">
+            <h2>Обратная связь</h2>
+            <form id="contactForm" action="boom.php" method="post">
+    <div class="form-group">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit">Отправить</button>
+</form>
+ 
+       
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Сайт сделала: Каткова Полина Сергеевна, контакты: 89996099012</p>
+        <p>2025 год</p>
+    </div>
+    
+    <script>
+    // Переключение между разделами
+    function showSection(sectionId) {
+        var sections = document.getElementsByClassName('section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active');
+        }
+        document.getElementById(sectionId).classList.add('active');
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // Обработка формы
+    function submitForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        
+        if (name && email && message) {
+            var messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = 'Спасибо, ' + name + '! Ваше сообщение отправлено.';
+            messageDiv.className = 'form-message success';
+            messageDiv.style.display = 'block';
+            
+            document.getElementById('contactForm').reset();
+            
+            setTimeout(function() {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+        return true;
+    }
+
+    // Регистрация Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker зарегистрирован'))
+                .catch(err => console.log('Ошибка:', err));
+        });
+    }
+</script>
+	
+
+</body>
+</html>
